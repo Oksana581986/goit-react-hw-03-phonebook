@@ -1,0 +1,13 @@
+.delete {
+    background-color: orange;
+    border-color: orange;
+    color:white;
+    border-radius: 10%;
+    margin-left: 12px;
+    cursor: pointer;
+}
+
+.delete:hover,
+.delete:focus {
+    background-color:darkorange;
+}

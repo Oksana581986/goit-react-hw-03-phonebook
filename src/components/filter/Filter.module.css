@@ -1,0 +1,10 @@
+.labelfilter {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+}
+
+.inputfilter {
+    width: 180px;
+    padding-left: 20px;
+}

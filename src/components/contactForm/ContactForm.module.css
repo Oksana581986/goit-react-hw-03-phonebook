@@ -1,0 +1,34 @@
+.formcontact {
+    padding-left: 20px;
+  }
+  
+  .addcontact {
+      background-color: orange;
+      border-color: orange;
+      color:white;
+      border-radius: 10%;
+      cursor: pointer;
+  }
+  
+  .addcontact:hover,
+  .addcontact:focus {
+      background-color:darkorange;
+  }
+  
+  .labelname {
+  display: flex;
+  flex-direction: column;
+  }
+  
+  .labelnumber  {
+  display: flex;
+  flex-direction: column;
+  }
+  
+  .inputname {
+  width: 200px;
+  }
+  
+  .inputnumber {
+  width: 200px;
+  }
