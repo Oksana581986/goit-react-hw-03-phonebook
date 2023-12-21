@@ -17,16 +17,25 @@ export class App extends Component {
     number: '',
   };
 
-  componentDidMount() {
+   componentDidMount() {
+    this.loadContactsFromLocalStorage();
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.contacts !== this.state.contacts) {
+      this.saveContactsToLocalStorage();
+    }
+  }
+
+  loadContactsFromLocalStorage() {
     const storedContacts = JSON.parse(localStorage.getItem('contacts')) || [];
     this.setState({ contacts: storedContacts });
   }
 
-  componentDidUpdate(prevProps, prevState) {
-      if (prevState.contacts !== this.state.contacts) {
-      localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
-    }
+  saveContactsToLocalStorage() {
+    localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
   }
+
  
   handleSubmit = (e) => {
     e.preventDefault();
